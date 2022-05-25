@@ -1,0 +1,35 @@
+from time import sleep
+
+print("Olá, Você está na Cauculadora Online")
+nome = input("Digite seu Nome:")
+n1 = int(input("Digite o Valor 1: "))
+n2 = int(input("Digite o Valor 2: "))
+while True:
+	print("\033[35m=\033[m"*53)
+	sleep(1.5)
+	print('''Escolha uma opção
+[1] SOMAR
+[2] SUBTRAIR
+[3] MULTIPLICAR
+[4] MAIOR
+[5] NOVOS VALORES
+[6] ENCERRAR PROGRAMA''')
+	print("QUAL A SUA OPÇÃO? ")
+	op = int(input())
+	if op == 1:
+		print("O resultado de {} + {} = {}".format(n1, n2, n1+n2))
+	elif op == 2:
+	    subtrair = n1 - n2
+	    print(nome, " a subtração entre {} e {} = {}".format(n1, n2, subtrair))
+	elif op == 3:
+		print("O resultado de {} × {} = {}".format(n1, n2, n1*n2))
+	elif op == 4:
+		print("O maior número entre {} e {} é {}".format(n1, n2, max(n1,n2)))
+	elif op == 5:
+		n1 = int(input("Digite o Valor 1: "))
+		n2 = int(input("Digite o Valor 2: "))
+	elif op == 6:
+		print("...Programa encerrado. Volte Sempre...")
+		break 
+	else:
+		print("Opção Inválida. Tente Novamente.")
